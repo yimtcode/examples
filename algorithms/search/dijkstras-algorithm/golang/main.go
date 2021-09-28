@@ -6,68 +6,73 @@ import (
 )
 
 func main() {
-	graph := make(map[string]map[string]int)
-	graph["start"] = map[string]int{}
-	graph["start"]["a"] = 6
-	graph["start"]["b"] = 2
+	graph := make(map[string]map[string]uint32)
 
-	graph["a"] = map[string]int{}
-	graph["a"]["finish"] = 1
+	graph["Start"] = map[string]uint32{}
+	graph["Start"]["A"] = 6
+	graph["Start"]["B"] = 2
 
-	graph["b"] = map[string]int{}
-	graph["b"]["a"] = 3
-	graph["b"]["finish"] = 5
+	graph["A"] = map[string]uint32{}
+	graph["A"]["Dest"] = 1
 
-	graph["finish"] = map[string]int{}
+	graph["B"] = map[string]uint32{}
+	graph["B"]["A"] = 3
+	graph["B"]["Dest"] = 5
 
-	costs, parents := findShortestPath(graph, "start", "finish")
-	fmt.Println(costs, parents)
+	graph["Dest"] = map[string]uint32{}
+
+	start := "Start"
+	Dest := "Dest"
+	costs, parents := findShortestPath(graph, start)
+	fmt.Println(costs[Dest], parents)
 }
 
-// Finds shortest path using dijkstra algorithm
-func findShortestPath(graph map[string]map[string]int, startNode string, finishNode string) (map[string]int, map[string]string)  {
-	costs := make(map[string]int)
-	costs[finishNode] = math.MaxInt32
-
+func findShortestPath(graph map[string]map[string]uint32, start string) (map[string]uint32, map[string]string) {
+	costs := make(map[string]uint32)
 	parents := make(map[string]string)
-	parents[finishNode] = ""
+	processed := make(map[string]struct{})
 
-	processed := make(map[string]bool)
-
-	// Initialization of costs and parents
-	for node, cost := range graph[startNode] {
+	for node, cost := range graph[start] {
+		parents[node] = start
 		costs[node] = cost
-		parents[node] = startNode
 	}
 
-	lowestCostNode := findLowestCostNode(costs, processed)
-	for ; lowestCostNode != "" ; {
-		// Calculation costs for neighbours
+	lowestCostNode := findLowestCost(costs, processed)
+	for len(lowestCostNode) > 0 {
 		for node, cost := range graph[lowestCostNode] {
-			newCost := costs[lowestCostNode] + cost
-			if newCost < costs[node] {
-				// Set new cost for this node
-				costs[node] = newCost
+			oldCost, ok := costs[node]
+			newCost := cost + costs[lowestCostNode]
+			if !ok {
+				// Not found direct save
 				parents[node] = lowestCostNode
+				costs[node] = newCost
+			} else if newCost < oldCost {
+				// Less that old cost
+				parents[node] = lowestCostNode
+				costs[node] = newCost
 			}
 		}
 
-		processed[lowestCostNode] = true
-		lowestCostNode = findLowestCostNode(costs, processed)
+		processed[lowestCostNode] = struct{}{}
+		lowestCostNode = findLowestCost(costs, processed)
 	}
 
 	return costs, parents
 }
 
-func findLowestCostNode(costs map[string]int, processed map[string]bool) string {
-	lowestCost := math.MaxInt32
-	lowestCostNode := ""
+func findLowestCost(costs map[string]uint32, processed map[string]struct{}) string {
+	lowestNode := ""
+	var lowestCost uint32 = math.MaxUint32
 	for node, cost := range costs {
-		if _, inProcessed := processed[node]; cost < lowestCost && !inProcessed {
+		if _, ok := processed[node]; ok {
+			continue
+		}
+
+		if cost < lowestCost {
+			lowestNode = node
 			lowestCost = cost
-			lowestCostNode = node
 		}
 	}
 
-	return lowestCostNode
+	return lowestNode
 }
