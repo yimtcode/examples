@@ -7,6 +7,8 @@
 - [搜索](algorithms/search)
   - [广度优先搜索](algorithms/search/breadth-first-search)
   - [狄克斯特拉算法](algorithms/search/dijkstras-algorithm)
+- [排序](algorithms/sort)
+  - [归并排序](algorithms/sort/merge-sort)
 - [贪心算法](algorithms/greedy-algorithm)
 
 ## 设计模式大纲
