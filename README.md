@@ -12,6 +12,7 @@
 | :----------: | :----------------------------------------------------: |
 | 折半插入排序 |  [Go](golang/algorithm/binary-insertion-sort/main.go)  |
 | 直接插入排序 | [GO](golang/algorithm/straight-insertion-sort/main.go) |
+|   选择排序   |     [Go](golang/algorithm/selection-sort/main.go)      |
 |   归并排序   |       [Go](golang/algorithm/merge-sort/main.go)        |
 
 ### 2.2.查找
