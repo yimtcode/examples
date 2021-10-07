@@ -8,9 +8,11 @@
 
 ### 2.1.排序
 
-|   名称   |                   实现                    |
-| :------: | :---------------------------------------: |
-| 归并排序 | [Go](golang/algorithm/merge-sort/main.go) |
+|     名称     |                          实现                          |
+| :----------: | :----------------------------------------------------: |
+| 折半插入排序 |  [Go](golang/algorithm/binary-insertion-sort/main.go)  |
+| 直接插入排序 | [GO](golang/algorithm/straight-insertion-sort/main.go) |
+|   归并排序   |       [Go](golang/algorithm/merge-sort/main.go)        |
 
 ### 2.2.查找
 
