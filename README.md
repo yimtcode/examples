@@ -4,9 +4,10 @@
 
 ## 1.数据结构
 
-| 标题 |                   实现                    | 备注 |
-| :--: | :---------------------------------------: | :--: |
-| 数组 | [Go](golang/datastructure/array/array.go) |      |
+|   标题   |               实现               | 备注 |
+| :------: | :------------------------------: | :--: |
+|   数组   | [Go](golang/datastructure/array) |      |
+| 双端队列 | [Go](golang/datastructure/deque) |      |
 
 ## 2.算法
 
