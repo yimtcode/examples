@@ -27,6 +27,8 @@ func (d *Deque) PushRight(obj interface{}) {
 }
 
 func (d *Deque) PopLeft() interface{} {
+	d.lazy()
+
 	if d.Len() == 0 {
 		panic("Deque is empty")
 	}
@@ -37,6 +39,8 @@ func (d *Deque) PopLeft() interface{} {
 }
 
 func (d *Deque) PopRight() interface{} {
+	d.lazy()
+
 	if d.Len() == 0 {
 		panic("Deque is empty")
 	}
@@ -48,6 +52,7 @@ func (d *Deque) PopRight() interface{} {
 
 func (d *Deque) Len() int {
 	d.lazy()
+
 	return int(d.last - d.first + 1)
 }
 
