@@ -8,6 +8,7 @@
 | :------: | :------------------------------: | :--: |
 |   数组   | [Go](golang/datastructure/array) |      |
 | 双端队列 | [Go](golang/datastructure/deque) |      |
+|   堆栈   | [Go](golang/datastructure/stack) |      |
 
 ## 2.算法
 
