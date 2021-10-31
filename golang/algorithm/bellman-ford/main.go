@@ -51,7 +51,7 @@ func bellmanFord(graph map[string]map[string]float32, source string) (distance m
 	// 负权环检查
 	for fromName := range graph {
 		for toName := range graph[fromName] {
-			if distance[toName] > distance[fromName] + graph[fromName][toName] {
+			if distance[toName] > distance[fromName]+graph[fromName][toName] {
 				return nil, nil
 			}
 		}
