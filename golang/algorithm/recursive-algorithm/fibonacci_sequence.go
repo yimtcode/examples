@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 递归：
 // 斐波那契数列
 func fibonacciSequence(n int) int {
 	if n < 0 {

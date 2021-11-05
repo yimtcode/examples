@@ -30,9 +30,10 @@
 
 **递推算法**
 
-|     名称     |                             实现                             |  备注  |
-| :----------: | :----------------------------------------------------------: | :----: |
-| 斐波那契数列 | [Go](golang/algorithm/recursive-algorithm/fibonacci_sequence.go) | 顺推法 |
+|     名称      |                             实现                             |  备注  |
+| :-----------: | :----------------------------------------------------------: | :----: |
+| 斐波那契数列  | [Go](golang/algorithm/recursive-algorithm/fibonacci_sequence.go) | 顺推法 |
+| 10进制转2进制 | [Go](golang/algorithm/recursive-algorithm/decimal_to_bianry.go) | 顺推法 |
 
 **其他**
 
@@ -56,4 +57,10 @@
 |    名称    |                     实现                     |
 | :--------: | :------------------------------------------: |
 | 观察者模式 | [Go](golang/designpattern/behavior/observer) |
+
+## 4.参考
+
+- 《图解算法》
+
+- 《C/C++函数与算法速查手册》
 
