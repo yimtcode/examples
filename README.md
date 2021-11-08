@@ -34,6 +34,7 @@
 | :-----------: | :----------------------------------------------------------: | :----: |
 | 斐波那契数列  | [Go](golang/algorithm/recursive-algorithm/fibonacci_sequence.go) | 顺推法 |
 | 10进制转2进制 | [Go](golang/algorithm/recursive-algorithm/decimal_to_bianry.go) | 顺推法 |
+|  母年生小牛   |      [Go](golang/algorithm/recursive-algorithm/cow.go)       | 顺推法 |
 
 **其他**
 
