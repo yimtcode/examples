@@ -1,15 +1,14 @@
 package avl_tree
 
 type AVLTree struct {
-	root Node
-	size int
+	root    *Node
+	size    int
+	compare func(d1, d2 interface{}) int
 }
 
-func NewAVLTree(data interface{}) *AVLTree {
-	return &AVLTree{
-		root: Node{Data: data, height: 1},
-		size: 1,
-	}
+func (a *AVLTree) SetCompare(compare func(d1, d2 interface{}) int) *AVLTree {
+	a.compare = compare
+	return a
 }
 
 func (a *AVLTree) GetSize() int {
@@ -22,4 +21,12 @@ func (a *AVLTree) IsEmpty() bool {
 
 func (a *AVLTree) isBalanced() bool {
 	return a.root.isBalanced()
+}
+
+func (a *AVLTree) Add(data interface{}) {
+	if a.root == nil {
+		a.root = NewNode(data)
+	} else {
+		a.root.add(data, a.compare)
+	}
 }
