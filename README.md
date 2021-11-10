@@ -4,11 +4,12 @@
 
 ## 1.数据结构
 
-|   标题   |               实现               | 备注 |
-| :------: | :------------------------------: | :--: |
-|   数组   | [Go](golang/datastructure/array) |      |
-| 双端队列 | [Go](golang/datastructure/deque) |      |
-|   堆栈   | [Go](golang/datastructure/stack) |      |
+|   标题   |                   实现                   | 备注 |
+| :------: | :--------------------------------------: | :--: |
+|   数组   |     [Go](golang/datastructure/array)     |      |
+| 双端队列 |     [Go](golang/datastructure/deque)     |      |
+|   堆栈   |     [Go](golang/datastructure/stack)     |      |
+|  AVL树   | [Go](golang/datastructure/tree/avl-tree) |      |
 
 ## 2.算法
 
