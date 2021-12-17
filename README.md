@@ -15,12 +15,13 @@
 
 **排序算法**
 
-|     名称     |                          实现                          |
-| :----------: | :----------------------------------------------------: |
-| 折半插入排序 |  [Go](golang/algorithm/binary-insertion-sort/main.go)  |
-| 直接插入排序 | [GO](golang/algorithm/straight-insertion-sort/main.go) |
-|   选择排序   |     [Go](golang/algorithm/selection-sort/main.go)      |
-|   归并排序   |       [Go](golang/algorithm/merge-sort/main.go)        |
+|     名称     |                          实现                          |                             参考                             |
+| :----------: | :----------------------------------------------------: | :----------------------------------------------------------: |
+| 折半插入排序 |  [Go](golang/algorithm/binary-insertion-sort/main.go)  |                                                              |
+| 直接插入排序 | [GO](golang/algorithm/straight-insertion-sort/main.go) |                                                              |
+|   选择排序   |     [Go](golang/algorithm/selection-sort/main.go)      |                                                              |
+|   归并排序   |       [Go](golang/algorithm/merge-sort/main.go)        |                                                              |
+|   希尔排序   |       [Go](golang/algorithm/shell-sort/main.go)        | [图解排序算法(二)之希尔排序](https://www.cnblogs.com/chengxiao/p/6104371.html)、[希尔排序](https://zh.wikipedia.org/zh-cn/希尔排序#Go) |
 
 **寻路算法**
 
